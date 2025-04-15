@@ -13,7 +13,6 @@ def main():
     bg2_img = pg.transform.flip(bg_img, True, False)
     kk_img = pg.image.load("fig/3.png")
     kk_img = pg.transform.flip(kk_img, True, False)
-    # key_lst = pg.key.get_pressed()
     kk_rct = kk_img.get_rect()
     kk_rct.center = 300, 200
     tmr = 0
@@ -32,6 +31,7 @@ def main():
         if x == 3200:
             x = 0
         clock.tick(200)
+        key_lst = pg.key.get_pressed()
         # if key_lst[pg.K_UP]:
         #     kk_rct.move_ip((0,-1))
         # if key_lst[pg.K_DOWN]:
