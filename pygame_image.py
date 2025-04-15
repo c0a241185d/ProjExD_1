@@ -24,7 +24,7 @@ def main():
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg2_img, [-x+1600, 0])
         screen.blit(bg_img,[-x+3200, 0])
-        screen.blit(kk_img, kk_rct)
+        # screen.blit(kk_img, kk_rct)
         pg.display.update()
         tmr += 1        
         x += 1
@@ -32,14 +32,14 @@ def main():
             x = 0
         clock.tick(200)
         key_lst = pg.key.get_pressed()
-        # if key_lst[pg.K_UP]:
-        #     kk_rct.move_ip((0,-1))
-        # if key_lst[pg.K_DOWN]:
-        #     kk_rct.move_ip((0,+1))
-        # if key_lst[pg.K_RIGHT]:
-        #     kk_rct.move_ip((1,0))
-        # if key_lst[pg.K_LEFT]:
-        #     kk_rct.move_ip((-1,0))
+        if key_lst[pg.K_UP]:
+            kk_rct.move_ip((0,-1))
+        if key_lst[pg.K_DOWN]:
+            kk_rct.move_ip((0,+1))
+        if key_lst[pg.K_RIGHT]:
+            kk_rct.move_ip((1,0))
+        if key_lst[pg.K_LEFT]:
+            kk_rct.move_ip((-1,0))
 
 if __name__ == "__main__":
     pg.init()
